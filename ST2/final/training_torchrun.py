@@ -1,6 +1,5 @@
-# -*- coding: utf-8 -*-
 import os
-import pickle  # For saving label encoders
+import pickle
 import pandas as pd
 import numpy as np
 import torch
@@ -25,7 +24,7 @@ BATCH_SIZE = 90
 EPOCHS = 30
 AUGMENTED = 'ChatGPT_augmentation.csv'
 
-
+# Change from ST1
 class F1Loss(torch.nn.Module):
     """
     Aproximation of f1 as loss function
@@ -49,7 +48,7 @@ class F1Loss(torch.nn.Module):
         return 1 - f1.mean()
 
 
-
+# Change from ST1
 class HybridF1CrossEntropyLoss(torch.nn.Module):
     """
     This creates a loss function that is a balance between F1 aprox and Cross entropy
@@ -73,7 +72,7 @@ torch.cuda.set_device(local_rank)
 device = torch.device(f'cuda:{local_rank}')
 print(f'Using device: {device}')
 
-# --- Data Loading and Preprocessing ---
+# ------- Data Loading and Preprocessing -------
 
 # Read the CSV file
 combined_df = pd.read_csv('combined_set.csv')
@@ -81,7 +80,7 @@ augmented_df = pd.read_csv(AUGMENTED)
 
 combined_df = pd.concat([combined_df, augmented_df], ignore_index=True)
 
-# Create a new column that combines 'product' and 'hazard'
+# Change from ST1 - Create a new column that combines 'product' and 'hazard'
 combined_df['stratify_col'] = combined_df['product'].astype(str) + "_" + combined_df['hazard'].astype(str)
 
 # Filter out unique occurrences in 'product' and 'hazard'
@@ -90,6 +89,7 @@ combined_df = combined_df[
     combined_df.duplicated(subset=['hazard'], keep=False)
 ]
 
+# Make sure nothing got through
 combined_df = combined_df[
     combined_df.duplicated(subset=['stratify_col'], keep=False)
 ]
@@ -97,14 +97,15 @@ combined_df = combined_df[
 # Perform stratified split
 train_df, val_df = train_test_split(
     combined_df,
-    test_size=0.3,
+    test_size=0.3, # Change from ST1
     random_state=69,
-    stratify=combined_df['stratify_col']  # Stratify on combined column
+    stratify=combined_df['stratify_col']  # Change from ST1 - Stratify on combined column
 )
 
 
 
 # Encode labels
+# Change from ST1 - label is pre fitted then used for transformation. This is due to class nonexistence
 hazard_encoder = LabelEncoder()
 hazard_encoder = hazard_encoder.fit(combined_df['hazard'])
 train_hazard = hazard_encoder.transform(train_df['hazard'])
@@ -129,7 +130,7 @@ hazard_weights = torch.tensor(compute_class_weight('balanced', classes=np.unique
 product_weights = torch.tensor(compute_class_weight('balanced', classes=np.unique(train_product), y=train_product), 
                               dtype=torch.float32).to(device)
 
-# --- Dataset and DataLoader ---
+# ------- Dataset and DataLoader -------
 class TextDataset(Dataset):
     def __init__(self, texts, hazard_labels, product_labels, tokenizer, max_len):
         self.texts = texts
@@ -159,7 +160,7 @@ class TextDataset(Dataset):
             'product': torch.tensor(self.product_labels[idx], dtype=torch.long)
         }
 
-# Updated to larger model
+# Use pretrained tokenizer
 tokenizer = AutoTokenizer.from_pretrained(MODEL)
 
 train_dataset = TextDataset(
@@ -178,6 +179,7 @@ val_dataset = TextDataset(
     MAX_LEN
 )
 
+# Change from ST1 - Used more workers
 train_sampler = DistributedSampler(train_dataset, shuffle=True)
 val_sampler = DistributedSampler(val_dataset, shuffle=False)
 
@@ -186,27 +188,31 @@ train_loader = DataLoader(train_dataset, batch_size=BATCH_SIZE, sampler=train_sa
 val_loader = DataLoader(val_dataset, batch_size=BATCH_SIZE, sampler=val_sampler,
                         num_workers=32, pin_memory=True)
 
-# --- Model Definition with Additional Dense Layer for the Product Branch ---
+# ------- Model Definition -------
 class MultiTaskBERT(nn.Module):
     def __init__(self, n_hazard, n_product):
         super().__init__()
-        # Using a larger model
+
+        # Use pretrained transformer
         self.bert = AutoModel.from_pretrained(MODEL)
 
         # Shared layers
+        # Change from ST1 - Added dropout, changed dense layer size
         self.hidden_layer = nn.Linear(self.bert.config.hidden_size, 2304)
         self.batch_norm = nn.BatchNorm1d(2304)
         self.relu = nn.ReLU()
-        self.dropout = nn.Dropout(0.1)  # First dropout
+        self.dropout = nn.Dropout(0.1)
 
-        # Hazard branch (direct classification)
+        # Hazard branch
+        # Change from ST1 - Hazard no longer classified by a single layer
         self.hazard_dense = nn.Linear(2304, 512)
         self.hazard_activation = nn.ReLU()
         self.hazard_dropout = nn.Dropout(0.45)
         self.hazard_batch_norm = nn.LayerNorm(512)
         self.hazard_classifier = nn.Linear(512, n_hazard)
 
-        # Product branch: additional dense layer before classification
+        # Product branch
+        # Change from ST1 - Product no longer classified by a single layer - Leaky ReLU
         self.product_dense = nn.Linear(2304, 1536)
         self.product_activation = nn.LeakyReLU(0.15)
         self.product_batch_norm = nn.LayerNorm(1536)
@@ -219,16 +225,16 @@ class MultiTaskBERT(nn.Module):
         x = self.hidden_layer(pooled_output)
         x = self.batch_norm(x)
         x = self.relu(x)
-        x = self.dropout(x)  # Apply dropout
+        x = self.dropout(x)
 
-        # Hazard predictions remain unchanged
+        # Change from ST1 - Same as in initialised model
         hazard_x = self.hazard_dense(x)
         hazard_x = self.hazard_activation(hazard_x)
         hazard_x = self.hazard_dropout(hazard_x)
         hazard_x = self.hazard_batch_norm(hazard_x)
         hazard_output = self.hazard_classifier(hazard_x)
 
-        # Product branch now goes through an additional dense layer with ReLU activation
+        # Change from ST1 - Same as in initialised model
         product_x = self.product_dense(x)
         product_x = self.product_batch_norm(product_x)
         product_x = self.product_activation(product_x)
@@ -243,10 +249,16 @@ model = MultiTaskBERT(
 ).to(device)
 model = DDP(model, device_ids=[local_rank], find_unused_parameters=True)
 
-# --- Training Setup ---
+# ------- Training Setup -------
+# Change from ST1 increased learning rate for optimizer
 optimizer = AdamW(model.parameters(), lr=2e-4)
+
+# Change from ST1 - custom loss function
 hazard_loss_fn = HybridF1CrossEntropyLoss(alpha=0.5)
 product_loss_fn = HybridF1CrossEntropyLoss(alpha=0.5)
+
+# Change from ST1 - This function is old and deprecated but adding the "cuda"
+# argument was causing me issues
 scaler = GradScaler()
 
 best_val_f1 = 0
@@ -254,7 +266,7 @@ best_model_weights = None
 train_f1s = []
 val_f1s = []
 
-# --- Evaluation Function ---
+# ------- Evaluation Function -------
 def evaluate(loader):
     model.eval()
     hazards, products = [], []
@@ -297,7 +309,7 @@ def evaluate(loader):
         )
     return None, None
 
-# --- Training Loop ---
+# ------- Training Loop -------
 
 for epoch in range(EPOCHS):
     train_loader.sampler.set_epoch(epoch)
@@ -308,13 +320,23 @@ for epoch in range(EPOCHS):
         attention_mask = batch['attention_mask'].to(device)
         hazard_labels = batch['hazard'].to(device)
         product_labels = batch['product'].to(device)
-        
+
+        # Change from ST1
+        #
+        # Autocast enables automatic mixed precision
+        # this reduces memory usage and speeds up training
+        # on GPUs with tensor cores
+        # Inspiration drawn from the pytorch automatic mixed precision recipe
+        #
+        # Use our custom loss function
         with autocast():
             hazard_pred, product_pred = model(input_ids, attention_mask)
             hazard_loss = hazard_loss_fn(hazard_pred, hazard_labels)
             product_loss = product_loss_fn(product_pred, product_labels)
             total_loss = hazard_loss + product_loss
-        
+
+        # Change from ST1 - scaling needed due to worse precision of autocast which can push
+        # gradients to being too small
         scaler.scale(total_loss).backward()
         scaler.step(optimizer)
         scaler.update()
@@ -323,8 +345,11 @@ for epoch in range(EPOCHS):
     val_hazard_f1, val_product_f1 = evaluate(val_loader)
 
     if dist.get_rank() == 0:
+        # Calculate F1 scores - NOT COMPARABLE TO SEMEVAL F1 THIS IS FOR TRAINING!
         train_f1 = (train_hazard_f1 + train_product_f1) / 2
         val_f1 = (val_hazard_f1 + val_product_f1) / 2
+
+        # Keep best model
         if val_f1 > best_val_f1:
             print(f'New best model at epoch {epoch+1} with F1: {val_f1:.4f}')
             best_val_f1 = val_f1
@@ -337,7 +362,7 @@ for epoch in range(EPOCHS):
         print(f'Train Product F1: {train_product_f1:.4f} | Val Product F1: {val_product_f1:.4f}')
         print('-' * 50)
 
-# --- Post-Training Processing ---
+# ------- Post-Training Processing -------
 if dist.get_rank() == 0:
     model.module.load_state_dict(best_model_weights)
     torch.save(model.module.state_dict(), 'best_model.pth')
@@ -354,7 +379,7 @@ if dist.get_rank() == 0:
     plt.savefig('training_curve.png')
     plt.close()
 
-    # --- Prediction on Incidents Set ---
+    # ------- Prediction on Incidents Set -------
     class InferenceDataset(Dataset):
         def __init__(self, texts, tokenizer, max_len):
             self.texts = texts
