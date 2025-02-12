@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import os
 import pickle
 import pandas as pd
@@ -16,6 +15,10 @@ from sklearn.utils.class_weight import compute_class_weight
 from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
 
+MODEL = 'bert-base-uncased'
+MAX_LEN = 512
+BATCH_SIZE = 50
+EPOCHS = 30
 AUGMENTED = 'ChatGPT_augmentation.csv'
 
 # Initialize distributed training
@@ -25,7 +28,7 @@ torch.cuda.set_device(local_rank)
 device = torch.device(f'cuda:{local_rank}')
 print(f'Using device: {device}')
 
-# --- Data Loading and Preprocessing ---
+# ------ Data Loading and Preprocessing ------
 
 # Load combined dataset
 combined_df = pd.read_csv('combined_set.csv')
@@ -39,7 +42,7 @@ train_df, val_df = train_test_split(
     combined_df,
     test_size=0.05,
     random_state=69,
-    stratify=combined_df['product-category']  # Key change: stratify on product-category
+    stratify=combined_df['product-category']
 )
 
 # Encode labels
@@ -65,7 +68,7 @@ hazard_weights = torch.tensor(compute_class_weight('balanced', classes=np.unique
 product_weights = torch.tensor(compute_class_weight('balanced', classes=np.unique(train_product), y=train_product), 
                               dtype=torch.float32).to(device)
 
-# --- Dataset and DataLoader ---
+# ------ Dataset and DataLoader ------
 class TextDataset(Dataset):
     def __init__(self, texts, hazard_labels, product_labels, tokenizer, max_len):
         self.texts = texts
@@ -95,9 +98,8 @@ class TextDataset(Dataset):
             'product': torch.tensor(self.product_labels[idx], dtype=torch.long)
         }
 
-tokenizer = AutoTokenizer.from_pretrained('bert-base-uncased')
-MAX_LEN = 512
-BATCH_SIZE = 50
+# Use pretrained tokenizer
+tokenizer = AutoTokenizer.from_pretrained(MODEL)
 
 train_dataset = TextDataset(
     train_df['text'].values,
@@ -123,15 +125,23 @@ train_loader = DataLoader(train_dataset, batch_size=BATCH_SIZE, sampler=train_sa
 val_loader = DataLoader(val_dataset, batch_size=BATCH_SIZE, sampler=val_sampler, 
                        num_workers=4, pin_memory=True)
 
-# --- Model Definition ---
+# ------ Model Definition ------
 class MultiTaskBERT(nn.Module):
     def __init__(self, n_hazard, n_product):
         super().__init__()
-        self.bert = AutoModel.from_pretrained('bert-base-uncased')
+
+        # Use pretrained transformer
+        self.bert = AutoModel.from_pretrained(MODEL)
+
+        # Shared layers
         self.hidden_layer = nn.Linear(self.bert.config.hidden_size, 1200)
         self.batch_norm = nn.BatchNorm1d(1200)
         self.relu = nn.ReLU()
+
+        # Hazard layer - Direct classification
         self.hazard_classifier = nn.Linear(1200, n_hazard)
+
+        # Prodcut layer - Direct classification
         self.product_classifier = nn.Linear(1200, n_product)
 
     def forward(self, input_ids, attention_mask):
@@ -148,7 +158,7 @@ model = MultiTaskBERT(
 ).to(device)
 model = DDP(model, device_ids=[local_rank], find_unused_parameters=True)
 
-# --- Training Setup ---
+# ------ Training Setup ------
 optimizer = AdamW(model.parameters(), lr=2e-5, no_deprecation_warning=True)
 hazard_loss_fn = nn.CrossEntropyLoss(weight=hazard_weights)
 product_loss_fn = nn.CrossEntropyLoss(weight=product_weights)
@@ -158,7 +168,7 @@ best_model_weights = None
 train_f1s = []
 val_f1s = []
 
-# --- Evaluation Function ---
+# ------ Evaluation Function ------
 def evaluate(loader):
     model.eval()
     hazards, products = [], []
@@ -200,29 +210,37 @@ def evaluate(loader):
         )
     return None, None
 
-# --- Training Loop ---
-EPOCHS = 30
+# ------ Training Loop ------
 
 for epoch in range(EPOCHS):
     train_loader.sampler.set_epoch(epoch)
     model.train()
+    # Foward pass
     for batch in train_loader:
         optimizer.zero_grad()
         input_ids = batch['input_ids'].to(device)
         attention_mask = batch['attention_mask'].to(device)
         hazard_pred, product_pred = model(input_ids, attention_mask)
+
+        # Compute loss
         hazard_loss = hazard_loss_fn(hazard_pred, batch['hazard'].to(device))
         product_loss = product_loss_fn(product_pred, batch['product'].to(device))
         total_loss = hazard_loss + product_loss
+
+        # Backpropagation
         total_loss.backward()
         optimizer.step()
 
     train_hazard_f1, train_product_f1 = evaluate(train_loader)
     val_hazard_f1, val_product_f1 = evaluate(val_loader)
 
+    # Only on main script
     if dist.get_rank() == 0:
+        # Calculate F1 scores - NOT COMPARABLE TO SEMEVAL F1 THIS IS FOR TRAINING!
         train_f1 = (train_hazard_f1 + train_product_f1) / 2
         val_f1 = (val_hazard_f1 + val_product_f1) / 2
+
+        # Keep best model
         if val_f1 > best_val_f1:
             print(f'New best model at epoch {epoch+1} with F1: {val_f1:.4f}')
             best_val_f1 = val_f1
@@ -235,7 +253,7 @@ for epoch in range(EPOCHS):
         print(f'Train Product F1: {train_product_f1:.4f} | Val Product F1: {val_product_f1:.4f}')
         print('-' * 50)
 
-# --- Post-Training Processing ---
+# ------ Post-Training Processing ------
 if dist.get_rank() == 0:
     model.module.load_state_dict(best_model_weights)
     torch.save(model.module.state_dict(), 'best_model.pth')
@@ -252,7 +270,7 @@ if dist.get_rank() == 0:
     plt.savefig('training_curve.png')
     plt.close()
 
-    # --- Prediction on Incidents Set ---
+    # ------ Prediction on Incidents Set ------
     class InferenceDataset(Dataset):
         def __init__(self, texts, tokenizer, max_len):
             self.texts = texts
@@ -280,7 +298,7 @@ if dist.get_rank() == 0:
 
     # Load incidents data
     incidents_df = pd.read_csv('incidents_set.csv')
-    index_col = incidents_df['Unnamed: 0'].values  # Assuming index column is named 'Unnamed: 0'
+    index_col = incidents_df['Unnamed: 0'].values
     texts = incidents_df['text'].values
 
     # Create dataset and loader
