@@ -23,6 +23,7 @@ MAX_LEN = 512
 BATCH_SIZE = 90
 EPOCHS = 30
 AUGMENTED = 'ChatGPT_augmentation.csv'
+AUGMENTED_2 = 'ChatGPT_augmentation_2.csv'
 
 # Change from ST1
 class F1Loss(torch.nn.Module):
@@ -77,8 +78,10 @@ print(f'Using device: {device}')
 # Read the CSV file
 combined_df = pd.read_csv('combined_set.csv')
 augmented_df = pd.read_csv(AUGMENTED)
+augmented_2_df = pd.read_csv(AUGMENTED_2)
 
 combined_df = pd.concat([combined_df, augmented_df], ignore_index=True)
+combined_df = pd.concat([combined_df, augmented_2_df], ignore_index=True)
 
 # Change from ST1 - Create a new column that combines 'product' and 'hazard'
 combined_df['stratify_col'] = combined_df['product'].astype(str) + "_" + combined_df['hazard'].astype(str)
