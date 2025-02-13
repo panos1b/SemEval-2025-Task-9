@@ -1,0 +1,45 @@
+Using device: cuda:2
+Using device: cuda:0
+Using device: cuda:5
+Using device: cuda:1
+Using device: cuda:4
+Using device: cuda:6
+Using device: cuda:3
+Using device: cuda:7
+New best model at epoch 1 with F1: 0.4826
+Epoch 1/10
+Train F1: 0.4647 | Val F1: 0.4826
+--------------------------------------------------
+New best model at epoch 2 with F1: 0.7384
+Epoch 2/10
+Train F1: 0.6529 | Val F1: 0.7384
+--------------------------------------------------
+New best model at epoch 3 with F1: 0.7743
+Epoch 3/10
+Train F1: 0.7829 | Val F1: 0.7743
+--------------------------------------------------
+New best model at epoch 4 with F1: 0.7777
+Epoch 4/10
+Train F1: 0.8740 | Val F1: 0.7777
+--------------------------------------------------
+Epoch 5/10
+Train F1: 0.9045 | Val F1: 0.7502
+--------------------------------------------------
+Epoch 6/10
+Train F1: 0.9422 | Val F1: 0.7664
+--------------------------------------------------
+New best model at epoch 7 with F1: 0.7820
+Epoch 7/10
+Train F1: 0.9357 | Val F1: 0.7820
+--------------------------------------------------
+Epoch 8/10
+Train F1: 0.9386 | Val F1: 0.7582
+--------------------------------------------------
+Epoch 9/10
+Train F1: 0.9637 | Val F1: 0.7680
+--------------------------------------------------
+New best model at epoch 10 with F1: 0.8013
+Epoch 10/10
+Train F1: 0.9709 | Val F1: 0.8013
+--------------------------------------------------
+Predictions saved to submission.csv

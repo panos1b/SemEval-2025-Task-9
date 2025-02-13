@@ -1,0 +1,998 @@
+Unnamed: 0,hazard,product
+0,listeria monocytogenes,hot dogs
+1,listeria monocytogenes,hot dogs
+2,listeria spp,hot dogs
+3,listeria monocytogenes,thermal processed beef meat
+4,metal fragment,milk powder
+5,salmonella,brazil nuts
+6,listeria monocytogenes,ricotta cheese
+7,listeria monocytogenes,ham
+8,glass fragment,tomato sauce
+9,toxin,grissini breadsticks
+10,escherichia coli,ground beef
+11,listeria monocytogenes,ham
+12,milk and products thereof,coconuts
+13,listeria monocytogenes,feta cheese
+14,polycyclic aromatic hydrocarbons,olive oil
+15,metal fragment,baby food
+16,soybeans and products thereof,potatoes
+17,other not classified chemical hazards,wine
+18,chemical,soy sauce
+19,other not classified biological hazards,chicken broth
+20,glass fragment,tomato sauce
+21,cereals containing gluten and products thereof,prepared dishes
+22,escherichia coli,feta cheese
+23,plastic fragment,caramel bites
+24,milk and products thereof,coconut milk
+25,peanuts and products thereof,cereal
+26,eggs and products thereof,chocolate eggs
+27,plastic fragment,milk
+28,milk and products thereof,coconut milk
+29,glass fragment,soft drinks
+30,spoilage,dressing
+31,eggs and products thereof,noodle soup
+32,milk and products thereof,dark chocolate coated almonds
+33,metal fragment,milk powder
+34,escherichia coli,feta cheese
+35,plastic fragment,caramel bites
+36,peanuts and products thereof,cereal bars
+37,sulphur dioxide,frozen lobster
+38,milk and products thereof,chocolate eggs
+39,cereals containing gluten and products thereof,lentils
+40,sesame seeds and products thereof,sesame paste
+41,listeria monocytogenes,feta cheese
+42,peanuts and products thereof,muesli
+43,incorrect labeling,pork sausage
+44,soybeans and products thereof,frozen ready to cook chicken
+45,metal fragment,dried fruits
+46,fish and products thereof,pâté
+47,cereals containing gluten and products thereof,corn
+48,escherichia coli,sprouts
+49,glass fragment,breakfast cereals
+50,metal fragment,frozen pork preparations
+51,listeria monocytogenes,precooked cooked beef meat products
+52,foreign bodies,milk powder
+53,bacillus spp.,bean sauce
+54,listeria monocytogenes,cheddar cheese
+55,other,plastics
+56,escherichia coli,ricotta cheese
+57,escherichia coli,raw beef meat
+58,peanuts and products thereof,wine
+59,other not classified,jellies
+60,listeria monocytogenes,precooked cooked beef meat products
+61,listeria monocytogenes,brie cheese
+62,rubber fragments,potato chips
+63,salmonella,peanuts
+64,cereals containing gluten and products thereof,lentils
+65,salmonella,macadamia nuts
+66,salmonella,snack mix
+67,salmonella,pistachio nuts
+68,salmonella,macadamia nuts
+69,salmonella,pistachio nuts
+70,salmonella,snack mix
+71,salmonella,macadamia nuts
+72,listeria monocytogenes,ham
+73,salmonella,macadamia nuts
+74,salmonella,macadamia nuts
+75,eggs and products thereof,buns
+76,salmonella,snack mix
+77,milk and products thereof,coconut milk
+78,salmonella,melon seeds
+79,almond,muesli
+80,plastic fragment,caramel bites
+81,amygdalin,apricot kernels
+82,listeria monocytogenes,halloumi cheese
+83,escherichia coli,blue cheese
+84,labelling/misdescription,sesame
+85,labelling/misdescription,chocolate drink powder
+86,salmonella,potato chips
+87,salmonella,butter
+88,listeria monocytogenes,chilled ready to eat salad and side dishes
+89,salmonella,cheese products
+90,clostridium botulinum,trouts
+91,escherichia coli,lettuce
+92,salmonella,tahini (sesame paste)
+93,plastic fragment,caramel bites
+94,sulphur dioxide,frozen lobster
+95,peanuts and products thereof,cereal bars
+96,salmonella,confectionery
+97,listeria monocytogenes,salmon
+98,peanuts and products thereof,bean snack
+99,salmonella,almonds
+100,unauthorised colour sudan 4,palm oil
+101,milk and products thereof,sauces
+102,other not classified biological hazards,noodles
+103,salmonella,sprouts
+104,glass fragment,tomato sauce
+105,unauthorised colour sudan 4,jam
+106,bacillus spp.,milk drink
+107,e 425 - konjac unauthorised,jellies
+108,other,algae
+109,listeria monocytogenes,thermal processed beef meat
+110,pistachio nut,turkey and turkey preparations
+111,peanuts and products thereof,cereal bars
+112,eggs and products thereof,Fishes not identified
+113,listeria monocytogenes,cheese - made from raw milk
+114,misdescription,chicken products - frozen
+115,listeria monocytogenes,chilled salads
+116,inspection issues,poultry meat and poultry meat products
+117,eggs and products thereof,pasta products
+118,misbranding,beef products
+119,peanuts and products thereof,milk chocolate covered raisins
+120,eggs and products thereof,pasta products
+121,other not classified biological hazards,tofu
+122,milk and products thereof,chocolate drink powder
+123,soybeans and products thereof,Not classified pork meat
+124,listeria monocytogenes,chilled ham
+125,escherichia coli,flour
+126,listeria monocytogenes,feta cheese
+127,escherichia coli,feta cheese
+128,escherichia coli,sprouts
+129,metal fragment,milk powder
+130,salmonella,almonds
+131,inspection issues,pig meat - pork
+132,salmonella,peaches
+133,bacillus spp.,bean sauce
+134,salmonella,almonds
+135,salmonella,almonds
+136,soybeans and products thereof,sausage products
+137,salmonella,macadamia nuts
+138,salmonella,cereal bars
+139,escherichia coli,ground beef
+140,pecan nut,donuts
+141,salmonella,baby spinach
+142,plastic fragment,smoked sausage
+143,undeclared additive,dumplings
+144,toxin,baby food
+145,cereals containing gluten and products thereof,pork sausage
+146,plastic fragment,frozen pizza
+147,inspection issues,poultry meat and poultry meat products
+148,eggs and products thereof,noodle soup
+149,cereals containing gluten and products thereof,thermal processed beef meat
+150,listeria monocytogenes,salmon
+151,milk and products thereof,coconut milk
+152,peanuts and products thereof,protein bar
+153,plastic fragment,burrito (ready to eat)
+154,salmonella,peaches
+155,milk and products thereof,bread and products therefor
+156,salmonella,macadamia nuts
+157,salmonella,macadamia nuts
+158,salmonella,macadamia nuts
+159,peanuts and products thereof,milk chocolate covered raisins
+160,salmonella,pistachio nuts
+161,salmonella,pistachio nuts
+162,milk and products thereof,seasoning mix
+163,salmonella,pistachio nuts
+164,salmonella,pistachio nuts
+165,salmonella,snack mix
+166,salmonella,peanuts
+167,salmonella,snack mix
+168,clostridium botulinum,fish roe
+169,salmonella,snack mix
+170,salmonella,brazil nuts
+171,escherichia coli,gorgonzola cheese
+172,glass fragment,tomato sauce
+173,escherichia coli,raw beef meat
+174,foreign bodies,pancakes
+175,salmonella,garlic powder
+176,inspection issues,frozen poultry products
+177,soybeans and products thereof,frozen ready to cook chicken
+178,other,fennel seeds
+179,cereals containing gluten and products thereof,pasta
+180,listeria monocytogenes,ham
+181,cereals containing gluten and products thereof,thermal processed beef meat
+182,peanuts and products thereof,bean snack
+183,cereals containing gluten and products thereof,prepared dishes
+184,cereals containing gluten and products thereof,potato salad
+185,salmonella,coriander
+186,sulphur dioxide and sulphites,dried apricots
+187,inspection issues,pork belly
+188,soybeans and products thereof,potatoes
+189,listeria monocytogenes,chilled ham
+190,processing,canned corn
+191,milk and products thereof,coconut juice
+192,incorrect labeling,pork sausage
+193,cereals containing gluten and products thereof,pasta
+194,salmonella,chia seeds
+195,salmonella,garlic powder
+196,other not classified chemical hazards,jellies
+197,specified risk material (srm),beef
+198,soybeans and products thereof,Not classified pork meat
+199,fish and products thereof,chilli paste
+200,soybeans and products thereof,potatoes
+201,undeclared additive,dumplings
+202,cereals containing gluten and products thereof,sausage
+203,sesame seeds and products thereof,crackers
+204,metal fragment,ground beef
+205,plastic fragment,frozen pork preparations
+206,peanuts and products thereof,ground almonds
+207,escherichia coli,ground beef
+208,listeria monocytogenes,chilled ham
+209,soybeans and products thereof,flavoured whey protein preparations
+210,plastic fragment,burrito (ready to eat)
+211,sulphur dioxide and sulphites,golden raisins/sultanas
+212,listeria monocytogenes,pizza
+213,spoilage,dressing
+214,inspection issues,pork belly
+215,walnut,muffins
+216,plastic fragment,caramel bites
+217,soybeans and products thereof,potatoes
+218,sulphur dioxide and sulphites,golden raisins/sultanas
+219,spoilage,dressing
+220,celery and products thereof,all purpose seasoning
+221,cereals containing gluten and products thereof,sausage
+222,escherichia coli,ground beef
+223,fish and products thereof,dressing sauces
+224,glass fragment,wine
+225,metal fragment,sausage
+226,listeria monocytogenes,macadamia nuts
+227,listeria monocytogenes,macadamia nuts
+228,inspection issues,pork belly
+229,sulphur dioxide and sulphites,golden raisins/sultanas
+230,inspection issues,Catfishes (freshwater)
+231,glass fragment,breakfast cereals
+232,inspection issues,Catfishes (freshwater)
+233,inspection issues,pork belly
+234,salmonella,melon seeds
+235,peanuts and products thereof,sesame paste
+236,sulphur dioxide and sulphites,golden raisins/sultanas
+237,milk and products thereof,marinated chicken meat
+238,inspection issues,pork belly
+239,milk and products thereof,"meat, egg and dairy products"
+240,plastic fragment,minced beef
+241,plastic fragment,minced beef
+242,clostridium botulinum,trouts
+243,other not classified,breakfast cereals
+244,nuts,chocolate eggs
+245,almond,dried fruits with chocolate
+246,glass fragment,tomato sauce
+247,incorrect labeling,white lasagna sauce
+248,cereals containing gluten and products thereof,lentils
+249,bulging packaging,wine
+250,sulphur dioxide and sulphites,horseradish in jars
+251,soybeans and products thereof,frozen pizza
+252,eggs and products thereof,frozen pork preparations
+253,soybeans and products thereof,potatoes
+254,unauthorised colour sudan 4,palm oil
+255,cereals containing gluten and products thereof,sausage
+256,soybeans and products thereof,sausage products
+257,milk and products thereof,seasoning mix
+258,bulging packaging,wine
+259,incorrect labeling,baby food
+260,staphylococcus,coriander
+261,eggs and products thereof,frozen pork preparations
+262,mustard and products thereof,spice mix
+263,escherichia coli,ground beef
+264,inspection issues,poultry meat and poultry meat products
+265,incorrect labeling,pork sausage
+266,cereals containing gluten and products thereof,gluten free bread
+267,milk and products thereof,dark chocolate coated almonds
+268,listeria monocytogenes,precooked cooked beef meat products
+269,eggs and products thereof,noodle soup
+270,sulphur dioxide and sulphites,golden raisins/sultanas
+271,escherichia coli,ground beef
+272,cereals containing gluten and products thereof,frozen poultry products
+273,plastic fragment,frozen hash browns
+274,unauthorised colour sudan 4,palm oil
+275,inspection issues,pork belly
+276,inspection issues,pork belly
+277,milk and products thereof,chocolate drink powder
+278,mustard and products thereof,spice mix
+279,milk and products thereof,snacks (various)
+280,listeria monocytogenes,white mould cheese
+281,inspection issues,frozen pizza
+282,bone fragment,frozen poultry products
+283,milk and products thereof,coconut juice
+284,salmonella,baby spinach
+285,cyclospora,blueberries
+286,unauthorised import,Catfishes (freshwater)
+287,listeria monocytogenes,precooked cooked beef meat products
+288,misdescription,meat broth
+289,eggs and products thereof,noodle soup
+290,milk and products thereof,pancakes
+291,soybeans and products thereof,sausage products
+292,other,algae
+293,milk and products thereof,chicken products - frozen
+294,peanuts and products thereof,spreads
+295,insects,dried figs
+296,metal fragment,milk powder
+297,mustard and products thereof,spice mix
+298,plastic fragment,minced pork
+299,other not classified,tuna
+300,salmonella,baby spinach
+301,walnut,pretzel stick
+302,milk and products thereof,seasoning mix
+303,listeria monocytogenes,turnips
+304,coliforms,milk
+305,salmonella,cheese products
+306,listeria monocytogenes,cheese spread
+307,soybeans and products thereof,flavoured whey protein preparations
+308,metal fragment,milk powder
+309,sesame seeds and products thereof,snack crackers
+310,listeria monocytogenes,precooked cooked beef meat products
+311,rubber fragments,yoghurt
+312,sulphur dioxide and sulphites,horseradish in jars
+313,salmonella,pistachio nuts
+314,milk and products thereof,dark chocolates
+315,salmonella,macadamia nuts
+316,milk and products thereof,chocolate drink powder
+317,milk and products thereof,Veggie Burger
+318,salmonella,pistachio nuts
+319,sulphates/sulphites,dried apricots
+320,sulphur dioxide and sulphites,cumin powder
+321,eggs and products thereof,prepared salads
+322,milk and products thereof,Not classified pork meat
+323,sulphur dioxide and sulphites,dried apricots
+324,clostridium botulinum,fish roe
+325,chemical compound (unauthorised),prepared dishes and snacks
+326,peanuts and products thereof,bean snack
+327,milk and products thereof,barbecue sauce
+328,milk and products thereof,dark chocolate coated almonds
+329,listeria monocytogenes,sunflower seed
+330,salmonella,snacks (various)
+331,listeria monocytogenes,chicken preparations
+332,milk and products thereof,spread
+333,listeria monocytogenes,frozen vegetables
+334,listeria monocytogenes,frozen vegetables
+335,listeria monocytogenes,maize
+336,listeria monocytogenes,maize
+337,almond,muesli
+338,listeria monocytogenes,frozen vegetables
+339,listeria monocytogenes,walnuts
+340,listeria monocytogenes,maize
+341,metal fragment,frozen pizza
+342,listeria monocytogenes,bars
+343,listeria monocytogenes,sunflower seed
+344,listeria monocytogenes,vegetable mix
+345,milk and products thereof,food supplement
+346,milk and products thereof,tortilla chips
+347,eggs and products thereof,frozen pork preparations
+348,listeria monocytogenes,snack mix
+349,listeria monocytogenes,sunflower seed
+350,listeria monocytogenes,sunflower seed
+351,listeria monocytogenes,bars
+352,inspection issues,pork belly
+353,escherichia coli,raw beef meat
+354,salmonella,macadamia nuts
+355,listeria monocytogenes,frozen peas
+356,listeria monocytogenes,sunflower seed
+357,listeria monocytogenes,sunflower seed
+358,almond,milk chocolates
+359,incorrect use by dates,pork sausage
+360,eggs and products thereof,chocolates
+361,listeria monocytogenes,vegetable mix
+362,inspection issues,precooked cooked beef meat products
+363,salmonella,crabs
+364,milk and products thereof,snacks (various)
+365,other,feed materials
+366,soybeans and products thereof,frozen pork preparations
+367,salmonella,cheese products
+368,rubber fragments,yoghurt
+369,plastic fragment,salt
+370,peanuts and products thereof,bean snack
+371,heavy metals,dried plums
+372,eggs and products thereof,croissants
+373,milk and products thereof,chicken products - frozen
+374,metal fragment,thermal processed pork meat
+375,peanuts and products thereof,fruit pies
+376,metal fragment,baby food
+377,cereals containing gluten and products thereof,potato salad
+378,peanuts and products thereof,ground almonds
+379,listeria monocytogenes,macadamia nuts
+380,plastic fragment,burrito (ready to eat)
+381,bulging packaging,wine
+382,peanuts and products thereof,bean snack
+383,walnut,pretzel stick
+384,foreign bodies,baby food
+385,peanuts and products thereof,milk chocolate covered raisins
+386,escherichia coli,feta cheese
+387,listeria monocytogenes,salmon
+388,misdescription,dried beef meat
+389,eggs and products thereof,dip-sauce
+390,fish and products thereof,chicken products - frozen
+391,processing,frozen beef patties
+392,listeria monocytogenes,sandwich spread
+393,soybeans and products thereof,frozen pizza
+394,listeria monocytogenes,thermal processed beef meat
+395,listeria monocytogenes,sandwich spread
+396,listeria monocytogenes,herring
+397,listeria monocytogenes,fresh cheese
+398,processing,frozen poultry products
+399,labelling/misdescription,chocolate eggs
+400,cereals containing gluten and products thereof,confectionery
+401,salmonella,macadamia nuts
+402,milk and products thereof,dark chocolate coated almonds
+403,salmonella,pistachio nuts
+404,clostridium botulinum,fish roe
+405,plastic fragment,milk powder
+406,eggs and products thereof,curry
+407,plastic fragment,burrito (ready to eat)
+408,salmonella,potato chips
+409,incorrect labeling,buns
+410,salmonella,chocolate wafers
+411,incorrect use by dates,pork sausage
+412,soybeans and products thereof,tortilla chips
+413,plastic fragment,caramel bites
+414,eggs and products thereof,potato salad
+415,sulphur dioxide and sulphites,jam
+416,processing,minced pork
+417,plastic fragment,caramel bites
+418,peanuts and products thereof,cereal bars
+419,plastic fragment,salt
+420,e 425 - konjac unauthorised,jellies
+421,mustard and products thereof,spice mix
+422,milk and products thereof,crabs
+423,listeria monocytogenes,blue cheese
+424,soybeans and products thereof,energy drink
+425,cereals containing gluten and products thereof,corn
+426,eggs and products thereof,chocolate and chocolate products
+427,listeria monocytogenes,thermal processed beef meat
+428,escherichia coli,beef trimmings
+429,milk and products thereof,desserts
+430,salmonella,baby spinach
+431,incorrect labeling,pork sausage
+432,metal fragment,frozen pizza
+433,incorrect use by dates,pork sausage
+434,walnut,muffins
+435,metal fragment,milk powder
+436,milk and products thereof,bean snack
+437,listeria monocytogenes,kale
+438,moulds,coconut oil
+439,incorrect use by dates,pork sausage
+440,plastic fragment,burrito (ready to eat)
+441,soybeans and products thereof,frozen pizza
+442,almond,coffee beans
+443,metal fragment,frozen pizza
+444,escherichia coli,flour
+445,milk and products thereof,bread crumb
+446,escherichia coli,flour
+447,eggs and products thereof,noodle soup
+448,pseudomonas spp.,bottled water
+449,escherichia coli,ground beef
+450,milk and products thereof,chicken products - frozen
+451,soybeans and products thereof,Not classified pork meat
+452,milk and products thereof,spring rolls
+453,milk and products thereof,spring rolls
+454,cereals containing gluten and products thereof,muesli
+455,listeria monocytogenes,frozen vegetables
+456,cereals containing gluten and products thereof,pancakes
+457,milk and products thereof,Veggie Burger
+458,clostridium botulinum,fish roe
+459,spoilage,dressing
+460,other,crispbread
+461,soybeans and products thereof,sausage products
+462,escherichia coli,sprouts
+463,glass fragment,tomato sauce
+464,listeria monocytogenes,pig meat - pork
+465,listeria monocytogenes,sunflower seed
+466,Aflatoxin,nuts
+467,milk and products thereof,dark chocolate coated almonds
+468,milk and products thereof,spring rolls
+469,cereals containing gluten and products thereof,prepared dishes
+470,escherichia coli,ham
+471,milk and products thereof,chicken products - frozen
+472,milk and products thereof,dark chocolates
+473,milk and products thereof,chocolate chips
+474,cereals containing gluten and products thereof,potato salad
+475,plastic fragment,burrito (ready to eat)
+476,peanuts and products thereof,spreads
+477,soybeans and products thereof,coconut milk
+478,peanuts and products thereof,cereal bars
+479,escherichia coli,raw beef meat
+480,eggs and products thereof,crabs
+481,clostridium botulinum,fish roe
+482,escherichia coli,cereals
+483,milk and products thereof,crackers
+484,fish and products thereof,pâté
+485,listeria monocytogenes,chorizo
+486,peanuts and products thereof,cashew
+487,cashew,almond products
+488,specified risk material (srm),frozen beef tongue
+489,cereals containing gluten and products thereof,bread crumb
+490,plastic fragment,salt
+491,eggs and products thereof,frozen pork preparations
+492,glass fragment,tomato sauce
+493,salmonella,sesame paste
+494,eggs and products thereof,noodle soup
+495,listeria monocytogenes,cheese
+496,listeria monocytogenes,apples
+497,listeria monocytogenes,mashed chickpeas (hummus)
+498,packaging defect,wine
+499,listeria monocytogenes,vegetable mix
+500,milk and products thereof,instant coffee
+501,salmonella,fruits and vegetables
+502,listeria monocytogenes,halloumi cheese
+503,other not classified chemical hazards,coffee drink
+504,peanuts and products thereof,yogurt raisins
+505,metal fragment,dried fruits
+506,eggs and products thereof,chocolates
+507,pecan nut,ginger slices
+508,eggs and products thereof,noodle soup
+509,salmonella,wraps
+510,eggs and products thereof,noodle soup
+511,peanuts and products thereof,basil pesto sauce
+512,eggs and products thereof,dip-sauce
+513,other,fennel seeds
+514,cereals containing gluten and products thereof,Not classified pork meat
+515,sulphur dioxide and sulphites,golden raisins/sultanas
+516,salmonella,mitragyna speciosa (kratom)
+517,listeria monocytogenes,precooked cooked beef meat products
+518,peanuts and products thereof,cereal bars
+519,cereals containing gluten and products thereof,potato salad
+520,escherichia coli,veal
+521,salmonella,brazil nuts
+522,milk and products thereof,coconuts
+523,listeria monocytogenes,ham
+524,high content of vitamins,pet feed
+525,milk and products thereof,food supplement
+526,salmonella,garlic powder
+527,plastic fragment,burrito (ready to eat)
+528,salmonella,eggs
+529,listeria monocytogenes,brie cheese
+530,listeria monocytogenes,chilled ham
+531,salmonella,eggs
+532,listeria monocytogenes,chorizo
+533,escherichia coli,raw beef meat
+534,rubber fragments,yoghurt
+535,milk and products thereof,chilli paste
+536,eggs and products thereof,bagels
+537,nuts,chocolate eggs
+538,milk and products thereof,fish products
+539,bulging packaging,wine
+540,milk and products thereof,energy and protein bars
+541,escherichia coli,cow milk cheese
+542,cereals containing gluten and products thereof,potato salad
+543,peanuts and products thereof,cashew
+544,listeria monocytogenes,frozen broccoli
+545,salmonella,mitragyna speciosa (kratom)
+546,metal fragment,protein bar
+547,salmonella,snacks (various)
+548,misbranding,turkey and turkey preparations
+549,cyclospora,blueberries
+550,glass fragment,wine
+551,insects,dried figs
+552,peanuts and products thereof,crackers
+553,metal fragment,sugar
+554,mustard and products thereof,spice mix
+555,inspection issues,poultry meat and poultry meat products
+556,milk and products thereof,potato chips
+557,salmonella,liquid egg white
+558,salmonella,milk proteins
+559,salmonella,chicken
+560,fish and products thereof,dumplings
+561,salmonella,green pesto
+562,metal fragment,dried fruits
+563,listeria monocytogenes,fresh cheese
+564,glass fragment,tomato sauce
+565,peanuts and products thereof,cereal bars
+566,salmonella,mitragyna speciosa (kratom)
+567,fish and products thereof,chicken products - frozen
+568,plastic fragment,minced beef
+569,escherichia coli,feta cheese
+570,salmonella,basil pesto sauce
+571,salmonella,eggs
+572,improper conditions,mineral water
+573,inspection issues,frozen poultry products
+574,listeria monocytogenes,frozen vegetables
+575,paralytic shellfish poisoning (psp) toxins,oysters
+576,metal fragment,frozen pork preparations
+577,salmonella,basil pesto sauce
+578,milk and products thereof,desserts
+579,milk and products thereof,tortilla chips
+580,salmonella,fruits and vegetables
+581,labelling/misdescription,sesame
+582,listeria monocytogenes,chilled ready to eat salad and side dishes
+583,plastic fragment,vegan sausages
+584,mustard and products thereof,mayonnaise
+585,milk and products thereof,spring rolls
+586,listeria monocytogenes,chocolate wafers
+587,heavy metals,dried plums
+588,salmonella,pistachio nuts
+589,metal fragment,cooked chicken
+590,milk and products thereof,coconut juice
+591,eggs and products thereof,pasta products
+592,listeria monocytogenes,cheddar cheese
+593,incorrect labeling,lasagne
+594,listeria monocytogenes,chilled ham
+595,salmonella,green pesto
+596,milk and products thereof,chocolate and chocolate products
+597,milk and products thereof,barbecue sauce
+598,plastic fragment,burrito (ready to eat)
+599,spoilage,cider
+600,peanuts and products thereof,pretzels
+601,e 425 - konjac unauthorised,jellies
+602,salmonella,turkey and turkey preparations
+603,moulds,coconut oil
+604,listeria monocytogenes,sunflower seed
+605,glass fragment,tomato sauce
+606,bulging packaging,beer
+607,other not classified chemical hazards,breakfast cereals
+608,unauthorised import,Catfishes (freshwater)
+609,salmonella,chicken
+610,salmonella,chicken
+611,walnut,muffins
+612,inspection issues,Catfishes (freshwater)
+613,escherichia coli,feta cheese
+614,cereals containing gluten and products thereof,prepared dishes
+615,peanuts and products thereof,protein bar
+616,processing,white lasagna sauce
+617,peanuts and products thereof,brewer's yeast
+618,milk and products thereof,bean snack
+619,glass fragment,tomato sauce
+620,cashew,sweets
+621,other,olive oil
+622,cereals containing gluten and products thereof,bread crumb
+623,other,bottled water
+624,metal fragment,frozen pork preparations
+625,plastic fragment,burrito (ready to eat)
+626,milk and products thereof,coconut juice
+627,inspection issues,Catfishes (freshwater)
+628,milk and products thereof,dark chocolates
+629,peanuts and products thereof,brewer's yeast
+630,milk and products thereof,dark chocolates
+631,metal fragment,frozen pizza
+632,salmonella,tahini (sesame paste)
+633,salmonella,prepared dishes and snacks
+634,milk and products thereof,dark chocolate coated almonds
+635,milk and products thereof,potato chips
+636,incorrect labeling,pork sausage
+637,salmonella,almonds
+638,escherichia coli,raw beef meat
+639,salmonella,eggs
+640,milk and products thereof,dark chocolate coated almonds
+641,plastic fragment,vegan sausages
+642,plastic fragment,caramel bites
+643,salmonella,brazil nuts
+644,cereals containing gluten and products thereof,lentils
+645,incorrect labeling,pig meat - pork
+646,foreign bodies,frozen poultry products
+647,metal fragment,frozen pizza
+648,listeria monocytogenes,pea shoots
+649,metal fragment,vegan sausages
+650,milk and products thereof,seasoning mix
+651,salmonella,eggs
+652,salmonella,snacks (various)
+653,rubber fragments,vegan sausages
+654,escherichia coli,feta cheese
+655,plastic fragment,caramel bites
+656,cereals containing gluten and products thereof,lentils
+657,peanuts and products thereof,muesli
+658,milk and products thereof,pancakes
+659,peanuts and products thereof,ground almonds
+660,peanuts and products thereof,cereal bars
+661,almond,muesli
+662,eggs and products thereof,seasoning
+663,eggs and products thereof,tzatziki sauce
+664,eggs and products thereof,frozen pork preparations
+665,eggs and products thereof,noodle soup
+666,other not classified chemical hazards,plastics
+667,salmonella,liquid egg white
+668,incorrect use by dates,pork sausage
+669,cashew,almond products
+670,sesame seeds and products thereof,brownies
+671,listeria monocytogenes,broccoli
+672,clostridium botulinum,oysters
+673,sulphur dioxide and sulphites,mango
+674,paralytic shellfish poisoning (psp) toxins,oysters
+675,escherichia coli,cow milk cheese
+676,plastic fragment,burrito (ready to eat)
+677,milk and products thereof,spring rolls
+678,salmonella,garlic powder
+679,milk and products thereof,wraps
+680,eggs and products thereof,fish products
+681,milk and products thereof,Not classified pork meat
+682,milk and products thereof,chocolate drink powder
+683,listeria monocytogenes,pâté
+684,other,bottled mineral water
+685,processing,canned corn
+686,plastic fragment,lamb
+687,milk and products thereof,tortilla chips
+688,moulds,non-alcoholic beer
+689,salmonella,brazil nuts
+690,listeria monocytogenes,sandwiches
+691,listeria monocytogenes,ham
+692,escherichia coli,veal meat
+693,listeria monocytogenes,bars
+694,escherichia coli,raw beef meat
+695,listeria monocytogenes,ham
+696,plastic fragment,caramel bites
+697,clostridium botulinum,fish roe
+698,escherichia coli,raw beef meat
+699,escherichia coli,raw beef meat
+700,incorrect labeling,frozen poultry products
+701,plastic fragment,frozen hash browns
+702,escherichia coli,raw beef meat
+703,milk and products thereof,wraps
+704,salmonella,chocolate wafers
+705,peanuts and products thereof,green pesto
+706,cronobacter spp,infant formula
+707,metal fragment,thermal processed beef meat
+708,escherichia coli,raw beef meat
+709,salmonella,almonds
+710,toxin,oats
+711,incorrect labeling,soup
+712,listeria monocytogenes,guacamole
+713,metal fragment,thermal processed beef meat
+714,escherichia coli,raw beef meat
+715,listeria monocytogenes,thermal processed beef meat
+716,"antibiotics, vet drugs",frozen whole fish
+717,milk and products thereof,soup
+718,cereals containing gluten and products thereof,Not classified pork meat
+719,cereals containing gluten and products thereof,pancakes
+720,listeria monocytogenes,chicken
+721,listeria monocytogenes,noodles
+722,escherichia coli,feta cheese
+723,pecan nut,millet
+724,listeria monocytogenes,frozen vegetables mix
+725,milk and products thereof,chocolate drink powder
+726,listeria monocytogenes,mashed chickpeas (hummus)
+727,listeria monocytogenes,frozen vegetables mix
+728,listeria monocytogenes,frozen vegetables
+729,listeria monocytogenes,potato salad
+730,peanuts and products thereof,bean snack
+731,almond,muesli
+732,plastic fragment,lamb
+733,other,fennel seeds
+734,other not classified chemical hazards,wine
+735,peanuts and products thereof,ground almonds
+736,other not classified biological hazards,tofu
+737,other not classified chemical hazards,coffee drink
+738,soybeans and products thereof,frozen pizza
+739,mustard and products thereof,spice mix
+740,cereals containing gluten and products thereof,frozen poultry products
+741,milk and products thereof,chicken products - frozen
+742,peanuts and products thereof,green pesto
+743,listeria monocytogenes,vegetable ready to eat meals
+744,metal fragment,fruit snacks
+745,eggs and products thereof,noodle soup
+746,bulging packaging,beer
+747,peanuts and products thereof,green pesto
+748,hazelnut,milk chocolates
+749,salmonella,sprouts
+750,moulds,noodles
+751,toxin,tuna
+752,soybeans and products thereof,wraps
+753,cereals containing gluten and products thereof,pancakes
+754,milk and products thereof,chocolate and chocolate products
+755,milk and products thereof,spring rolls
+756,soybeans and products thereof,flavoured whey protein preparations
+757,peanuts and products thereof,milk chocolate covered raisins
+758,peanuts and products thereof,spreads
+759,metal fragment,frozen pork preparations
+760,peanuts and products thereof,cereal bars
+761,escherichia coli,ground beef
+762,listeria monocytogenes,fresh mushrooms
+763,salmonella,mashed chickpeas (hummus)
+764,other not classified biological hazards,other dairy products
+765,milk and products thereof,coconuts
+766,metal fragment,vegan sausages
+767,escherichia coli,raw beef meat
+768,sesame seeds and products thereof,sauces
+769,too high content of tetrahydrocannabinol (THC),pork sausage
+770,milk and products thereof,probiotic food supplement
+771,milk and products thereof,pancakes
+772,fish and products thereof,tortilla chips
+773,escherichia coli,ground beef
+774,escherichia coli,gorgonzola cheese
+775,milk and products thereof,desserts
+776,listeria monocytogenes,salmon
+777,celery and products thereof,all purpose seasoning
+778,listeria monocytogenes,cheddar cheese
+779,almond,muffins
+780,eggs and products thereof,croissants
+781,inspection issues,frozen poultry products
+782,salmonella,onions
+783,escherichia coli,sprouts
+784,listeria monocytogenes,chorizo
+785,listeria monocytogenes,broccoli
+786,sulphur dioxide and sulphites,dried mushrooms
+787,other not classified,jellies
+788,milk and products thereof,frozen poultry products
+789,milk and products thereof,cereal drink
+790,soybeans and products thereof,potatoes
+791,soybeans and products thereof,potatoes
+792,peanuts and products thereof,milk chocolate covered raisins
+793,soybeans and products thereof,frozen ready to cook chicken
+794,crustaceans and products thereof,dumplings
+795,listeria monocytogenes,ham
+796,cereals containing gluten and products thereof,lentils
+797,glass fragment,soft drinks
+798,glass fragment,soft drinks
+799,listeria monocytogenes,salmon
+800,cereals containing gluten and products thereof,prepared dishes
+801,spoilage,dressing
+802,plastic fragment,caramel bites
+803,mustard and products thereof,spice mix
+804,undeclared additive,sweeteners
+805,salmonella,peaches
+806,eggs and products thereof,noodle soup
+807,other not classified,jellies
+808,metal fragment,milk powder
+809,salmonella,tahini
+810,moulds,non-alcoholic beer
+811,other,food supplement
+812,listeria monocytogenes,cheddar cheese
+813,cereals containing gluten and products thereof,bread crumb
+814,fish and products thereof,chilli paste
+815,escherichia coli,cow milk cheese
+816,bulging packaging,beer
+817,plastic fragment,frozen hash browns
+818,other,bottled water
+819,moulds,non-alcoholic beer
+820,sulphur dioxide and sulphites,dried apples
+821,almond,muesli
+822,unauthorised substance ethylene oxide,sesame seeds
+823,unauthorised substance ethylene oxide,sesame seeds
+824,listeria monocytogenes,mashed chickpeas (hummus)
+825,milk and products thereof,probiotic food supplement
+826,sulphur dioxide,frozen lobster
+827,heavy metals,dried plums
+828,inspection issues,poultry meat and poultry meat products
+829,peanuts and products thereof,ground almonds
+830,milk and products thereof,coconuts
+831,eggs and products thereof,fish products
+832,rubber fragments,chicken based products
+833,unauthorised substance ethylene oxide,chocolate and products therefor
+834,salmonella,tahini
+835,soybeans and products thereof,pork preparation
+836,eggs and products thereof,noodle soup
+837,eggs and products thereof,noodle soup
+838,glass fragment,soft drinks
+839,unauthorised substance ethylene oxide,cream cheese
+840,fish and products thereof,dressing sauces
+841,other not classified chemical hazards,wine
+842,escherichia coli,ground beef
+843,salmonella,basil pesto sauce
+844,toxin,mackerel
+845,peanuts and products thereof,cashew
+846,fish and products thereof,dressing sauces
+847,metal fragment,yoghurt
+848,almond,muesli
+849,unauthorised substance ethylene oxide,grissini breadsticks
+850,milk and products thereof,chicken products - frozen
+851,milk and products thereof,chocolate drink powder
+852,salmonella,chicken
+853,chemical compound (unauthorised),food supplement
+854,peanuts and products thereof,cereal bars
+855,milk and products thereof,cereal bars
+856,milk and products thereof,coconuts
+857,high content of cyanide,apricot kernels
+858,inspection issues,pork belly
+859,sulphur dioxide and sulphites,mango
+860,salmonella,mashed chickpeas (hummus)
+861,hazelnut,milk chocolates
+862,clostridium botulinum,fish roe
+863,metal fragment,baby food
+864,milk and products thereof,coconuts
+865,listeria monocytogenes,chicken
+866,"antibiotics, vet drugs",bottled water
+867,fish and products thereof,wraps
+868,cashew,almond products
+869,cashew,almond products
+870,moulds,non-alcoholic beer
+871,salmonella,chorizo
+872,incorrect use by dates,pork sausage
+873,milk and products thereof,pancakes
+874,hazelnut,milk chocolates
+875,cashew,almond products
+876,sesame seeds and products thereof,snack crackers
+877,salmonella,waffles
+878,cereals containing gluten and products thereof,corn
+879,eggs and products thereof,dip-sauce
+880,cereals containing gluten and products thereof,corn
+881,milk and products thereof,tortilla chips
+882,listeria monocytogenes,fresh mushrooms
+883,salmonella,coriander
+884,cashew,almond products
+885,salmonella,pet feed
+886,sulphur dioxide and sulphites,mango
+887,salmonella,shrimps
+888,cereals containing gluten and products thereof,bars
+889,cereals containing gluten and products thereof,potato salad
+890,crustaceans and products thereof,dumplings
+891,sesame seeds and products thereof,sauces
+892,toxin,anchovies in oil
+893,cereals containing gluten and products thereof,prepared dishes
+894,other not classified,jellies
+895,listeria monocytogenes,cheddar cheese
+896,listeria monocytogenes,fruits and vegetables
+897,listeria monocytogenes,frozen diced chicken roast
+898,Aflatoxin,pet feed
+899,milk and products thereof,tortilla chips
+900,milk and products thereof,dumplings
+901,escherichia coli,raw milk
+902,heavy metals,dried plums
+903,peanuts and products thereof,cereal bars
+904,listeria monocytogenes,chilled ready to eat salad and side dishes
+905,listeria monocytogenes,potato salad
+906,unauthorised substance ethylene oxide,cream cheese
+907,unauthorised substance ethylene oxide,cream cheese
+908,walnut,muffins
+909,sulphur dioxide,dried shrimp noodles
+910,plastic fragment,salt
+911,listeria monocytogenes,prepared salads
+912,milk and products thereof,coconut milk
+913,listeria monocytogenes,cooked chicken
+914,metal fragment,baby food
+915,too high content of tetrahydrocannabinol (THC),cbd oil
+916,patulin,apple juice
+917,patulin,fruit juice
+918,plastic fragment,burrito (ready to eat)
+919,listeria monocytogenes,salmon
+920,clostridium botulinum,clams (canned)
+921,plastic fragment,frozen hash browns
+922,unauthorised substance ethylene oxide,coconut drink
+923,listeria monocytogenes,chilled ready to eat salad and side dishes
+924,salmonella,halva
+925,unauthorised substance ethylene oxide,instant noodles
+926,salmonella,prepared dish
+927,metal fragment,dried fruits
+928,pseudomonas spp.,bottled water
+929,sesame seeds and products thereof,snack crackers
+930,sulphur dioxide and sulphites,dried apricots
+931,unauthorised substance ethylene oxide,instant noodles
+932,milk and products thereof,bread crumb
+933,milk and products thereof,coconut milk
+934,milk and products thereof,food supplement
+935,sulphur dioxide,frozen lobster
+936,metal fragment,vegan sausages
+937,mustard and products thereof,spice mix
+938,milk and products thereof,spring rolls
+939,listeria monocytogenes,salmon
+940,toxin,tuna
+941,eggs and products thereof,noodle soup
+942,milk and products thereof,muffins
+943,insects,dried figs
+944,hazelnut,milk chocolates
+945,soybeans and products thereof,chocolate bars
+946,inspection issues,Catfishes (freshwater)
+947,salmonella,chicken
+948,cereals containing gluten and products thereof,thermal processed beef meat
+949,listeria monocytogenes,vegetables
+950,peanuts and products thereof,chocolate eggs
+951,plastic fragment,caramel bites
+952,processing,raw milk
+953,cereals containing gluten and products thereof,potato salad
+954,milk and products thereof,sweets
+955,listeria monocytogenes,kale
+956,listeria monocytogenes,fresh mushrooms
+957,listeria monocytogenes,herring
+958,sulphur dioxide and sulphites,dried apricots
+959,listeria monocytogenes,halloumi cheese
+960,norovirus,oysters
+961,other not classified,jellies
+962,cereals containing gluten and products thereof,lentils
+963,unauthorised substance ethylene oxide,olive oil
+964,norovirus,oysters
+965,salmonella,poppy
+966,salmonella,cereal bars
+967,peanuts and products thereof,milk chocolate covered raisins
+968,salmonella,poppy
+969,milk and products thereof,dumplings
+970,cereals containing gluten and products thereof,potato salad
+971,norovirus,chocolate and products therefor
+972,metal fragment,other not classified meat products
+973,other not classified biological hazards,other dairy products
+974,cashew,dried almonds
+975,salmonella,peanuts
+976,salmonella,almonds
+977,salmonella,snack mix
+978,almond,muesli
+979,peanuts and products thereof,bean snack
+980,salmonella,snack mix
+981,cereals containing gluten and products thereof,potato salad
+982,norovirus,oysters
+983,cronobacter spp,infant formula
+984,norovirus,blackberries
+985,milk and products thereof,coconut juice
+986,soybeans and products thereof,pork preparation
+987,inspection issues,poultry meat and poultry meat products
+988,other,food supplement
+989,peanuts and products thereof,pretzels
+990,cereals containing gluten and products thereof,lentils
+991,peanuts and products thereof,muesli
+992,pecan nut,chilled chicken parts
+993,salmonella,pistachio nuts
+994,listeria monocytogenes,salmon
+995,crustaceans and products thereof,tahini
+996,milk and products thereof,dark chocolates
